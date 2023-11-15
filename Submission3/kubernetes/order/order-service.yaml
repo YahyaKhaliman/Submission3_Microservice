@@ -4,9 +4,9 @@ metadata: # mendefinisikan metadata terkait objek
   labels:
     app: order-service
   name: order-service
-  namespace: submission3
+  namespace: e-commerce
 spec:  # memberikan spesifikasi untuk layanan
-  type: NodePort   # Mengubah tipe layanan menjadi NodePort supaya dapat diakses melalui port di node
+  type: ClusterIP   # Mengubah tipe layanan menjadi ClusterIP supaya dapat diakses rabbitmq
   ports:
   - port: 90
     targetPort: 3000

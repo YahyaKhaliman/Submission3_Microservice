@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment # Menetapkan objek yang didefinisikan berupa Deployment
 metadata: # Menetapkan metadata untuk Deployment
   name: shipping-service
-  namespace: submission3
+  namespace: e-commerce
 spec: # Menetapkan spesifikasi untuk deployment
   replicas: 1 # Menentukan jumlah replika pod yang harus dijalankan
   selector: # Mengatur dan menentukan selector yang digunakan 
@@ -22,4 +22,4 @@ spec: # Menetapkan spesifikasi untuk deployment
         - name: PORT
           value: "3001"
         - name: AMQP_URL
-          value: "amqp://localhost:5672"
+          value: "amqp://rabbitmq:5672"

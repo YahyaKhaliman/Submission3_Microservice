@@ -4,9 +4,9 @@ metadata: # mendefinisikan metadata terkait objek
   labels:
     app: shipping-service
   name: shipping-service
-  namespace: submission3
+  namespace: e-commerce
 spec: # memberikan spesifikasi untuk layanan
-  type: NodePort  # Mengubah tipe layanan menjadi NodePort supaya dapat diakses melalui port di node
+  type: ClusterIP  # Mengubah tipe layanan menjadi NodePort supaya dapat diakses melalui port di node
   ports:
   - port: 91
     targetPort: 3001
